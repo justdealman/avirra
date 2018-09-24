@@ -1,0 +1,41 @@
+footer.footer
+	.footer__social
+		a(href='javascript:void(0);')
+			include ../img/icon-social-vkontakte.svg
+		a(href='javascript:void(0);')
+			include ../img/icon-social-youtube.svg
+		a(href='javascript:void(0);')
+			include ../img/icon-social-facebook.svg
+		a(href='javascript:void(0);')
+			include ../img/icon-social-instagram.svg
+		a(href='javascript:void(0);')
+			include ../img/icon-social-viber.svg
+		a(href='javascript:void(0);')
+			include ../img/icon-social-whatsapp.svg
+		a(href='javascript:void(0);')
+			include ../img/icon-social-telegram.svg
+	.footer-content
+		.footer-content__row
+			.footer-nav
+				a(href='javascript:void(0);', data-open='faq') Вопросы и ответы
+				a(href='javascript:void(0);', data-anchor='3') Отзывы
+				a(href='javascript:void(0);', data-anchor='5') Фотогалерея
+			.footer-content__rc
+				a.footer--email(href='mailto:info@avirra.ru') #[span info@avirra.ru]
+				.footer-call
+					a.footer-call--phone(href='tel:+78002000600') 8 800 2000 600
+					span.footer-call--text Звонок по России бесплатный
+				button.btn.btn_feedback(data-open='feedback') Обратная связь
+	.footer__row
+		.footer__text
+			span.footer__text--copy © 2018 Автосалон AVIRRA. Все права защищены
+			span.footer__text--agreement #[a(href='javascript:void(0);') Соглашение об обработке персональных данных]
+		span.footer--logo
+		.footer-payment
+			span.footer-payment--title Сервис принимает оплату:
+			.footer-payment--item
+				include ../img/icon-visa.svg
+			.footer-payment--item
+				include ../img/icon-mastercard.svg
+			.footer-payment--item
+				include ../img/icon-mir.svg

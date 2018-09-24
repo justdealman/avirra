@@ -1,0 +1,3102 @@
+// Fonts
+
+@import './mixins/fonts.styl'
+webfont('Idealist', 'idealist-regular', normal)
+webfont('RoadRadio', 'roadradio-regular', normal)
+webfont('RoadRadio', 'roadradio-bold', bold)
+webfont('RoadRadio', 'roadradio-thin', 200)
+webfont('RoadRadio', 'roadradio-light', 300)
+webfont('Segoe UI', 'segoeui-regular', normal)
+
+// Variables
+
+colorDark = #4f4f4f
+colorBlue = #55afed
+f-arial = 'Arial', sans-serif
+f-idealist = 'Idealist', sans-serif
+f-roadradio = 'RoadRadio', sans-serif
+f-segoe = 'Segoe UI', sans-serif
+
+// Default
+
+html
+	height 100%
+
+	*
+		max-height 1000000px
+		vertical-align top
+		box-sizing border-box
+
+	*:before
+	*:after
+		vertical-align top
+		box-sizing border-box
+
+body
+	width 100%
+	height 100%
+	color #000000
+	font-size 12px
+	line-height 16px
+	font-family f-arial
+	padding 0
+	margin 0
+	background #ffffff
+	-webkit-tap-highlight-color transparent
+
+p
+	text-indent 0
+	padding 0
+	margin 0 0 16px
+
+table
+	margin 0 0 16px
+	border-collapse collapse
+
+	td
+		padding 0
+
+:focus
+	outline none
+
+img
+	padding 0
+	margin 0
+	border 0
+
+a
+	color #000000
+	text-decoration none
+
+	&:hover
+		text-decoration none
+
+form
+	margin 0
+
+ul
+	margin 0 0 10px 16px
+	padding 0
+
+	li
+		padding 0
+		list-style none
+
+ol
+	margin 0 0 10px 18px
+	padding 0
+
+	li
+		padding 0 0 0 16px
+
+input
+select
+textarea
+	color #000000
+	font-size 12px
+	font-family f-arial
+	padding 0
+	margin 0
+	background none
+	border 0
+	box-sizing border-box
+
+textarea
+	overflow auto
+
+button
+	font-family f-arial
+	margin 0
+	border 0
+	box-sizing border-box
+
+	&::-moz-focus-inner
+		padding 0
+		border 0
+
+::-webkit-input-placeholder
+	color #7a7a7a
+
+:-moz-placeholder
+	color #7a7a7a
+
+::-moz-placeholder
+	color #7a7a7a
+
+:-ms-input-placeholder
+	color #7a7a7a
+
+.img-cover
+.img-contain
+	display none !important
+
+.wrapper
+	overflow-x hidden
+	min-height 100%
+	padding-top 136px
+
+// Libs
+
+@import '../css/libs.css'
+
+// Core
+
+.menu-open
+	display none
+
+.header
+	position absolute
+	left 0
+	top 0
+	z-index 100
+	width 100%
+	background #1e1d1e
+	
+	&__row
+		max-width 1500px
+		font-size 0
+		padding 0 30px
+		margin 0 auto
+		
+	&__logo
+		display inline-block
+		width 175px
+		text-align center
+		padding 19px 0 16px
+		
+		&--img
+			max-width 100%
+			height auto
+			margin 0 0 21px
+			
+		&--text
+			display block
+			color #ffffff
+			font-size 14px
+			line-height 18px
+			font-family f-roadradio
+			text-transform uppercase
+
+	&__cc
+		display inline-block
+		width 100%
+		width calc(100% - 175px - 214px)
+		max-width 916px
+		padding 0 26px 0 24px
+		
+	&__content
+		display flex
+		justify-content flex-end
+		align-items center
+		color #ffffff
+		height 85px
+		padding 19px 0 0
+
+	&--slogan
+		display inline-block
+		color #ffffff
+		font-size 14px
+		line-height 18px
+		font-weight 200
+		font-family f-roadradio
+		text-transform uppercase
+		margin 0 auto 14px 0
+		
+	&--find
+		display inline-block
+		font-size 15px
+		line-height 18px
+		font-family f-idealist
+		text-transform uppercase
+		cursor pointer
+		padding 10px
+		margin 0 0 16px
+		
+		&:before
+			content ''
+			display inline-block
+			width 17px
+			height 18px
+			margin 0 10px 0 0
+			background url('../img/icon-lens.svg') no-repeat 0 0
+			background-size 100% 100%
+
+	&__call
+		display inline-block
+		color #ffffff
+		font-family f-segoe
+		text-align center
+		margin 0 0 10px 26px
+		
+		&--phone
+			display block
+			color #ffffff
+			font-size 24px
+			line-height 30px
+			
+		&--text
+			display block
+			font-size 12px
+			line-height 16px
+		
+	&__rc
+		display inline-block
+		width 214px
+		padding-top 19px
+		
+		.btn
+			width 100%
+			margin 6px 0 10px
+			
+	&.is-fixed
+		position fixed
+
+		& ^[-1]
+			&__row
+				height 70px
+
+			&__content
+				display none
+				
+			&__logo
+				padding 11px 0
+				width 145px
+				margin-right 30px
+			
+				img
+					width 105px
+					margin 0
+
+				&--text
+					display none
+					
+			&__rc
+				padding-top 11px
+
+		.nav
+			margin 9px 0 0 -15px
+			border-top-width 0
+
+			&__row
+				text-align left
+				
+			a
+				margin 0 36px 0 0
+
+.nav
+	border-top 1px solid #353435
+	
+	&__row
+		text-align right
+		margin 0 -10px 0 0
+
+	a
+		position relative
+		display inline-block
+		color #ffffff
+		font-size 14px
+		line-height 18px
+		font-family f-idealist
+		text-transform uppercase
+		padding 15px 10px 17px
+		margin-left 36px
+		
+		&:after
+			content ''
+			position absolute
+			left 10px
+			bottom 16px
+			width calc(100% - 20px)
+			border-bottom 1px solid #8b8b8b
+			opacity 0
+			transition opacity .2s ease
+			
+		&:hover
+			&:after
+				opacity 1
+		
+.btn
+	display inline-block
+	color #ffffff
+	font-size 15px
+	line-height 18px
+	font-family f-idealist
+	text-transform uppercase
+	letter-spacing .05em
+	cursor pointer
+	padding 11px 10px 9px
+	margin 0 0 10px
+	background colorBlue
+	border-radius 19px
+	text-transform uppercase
+	transition background-color .2s ease, box-shadow .2s ease
+	
+	&:hover
+		background-color #3da4ea
+		box-shadow inset 0 1px 2px rgba(0, 0, 0, 0.25)
+		
+	&_phone
+		&:before
+			content ''
+			display inline-block
+			width 20px
+			height 20px
+			margin -1px 6px -1px -8px
+			background url('../img/icon-phone.svg') no-repeat 0 0
+			background-size 100% 100%
+		
+	&_feedback
+		&:before
+			content ''
+			display inline-block
+			width 25px
+			height 19px
+			margin -2px 10px 3px -6px
+			background url('../img/icon-feedback.svg') no-repeat 100% 0
+		
+.hero
+	position relative
+	background-color rgba(0, 0, 0, 0.8)
+	
+	&-slider
+		opacity 0
+	
+		&.is-visible
+			opacity 1
+	
+		&--bg
+			position absolute
+			left 0
+			top 0
+			width 100%
+			height 100%
+			
+			&_mobile
+				display none
+				
+	&__item
+		position relative
+
+	.slick-prev
+	.slick-next
+		position absolute
+		left 50%
+		bottom 50%
+		z-index 5
+		margin-left -720px
+		margin-bottom -65px
+		
+	.slick-next
+		transform translateX(60px)
+		
+	&__row
+		position relative
+		z-index 1
+		max-width 1500px
+		height 680px
+		padding 0 30px
+		margin 0 auto
+		
+	&--title
+		position absolute
+		left 0
+		bottom 50%
+		display block
+		max-width 540px
+		color #ffffff
+		font-size 32px
+		line-height 46px
+		font-family f-roadradio
+		text-transform uppercase
+		padding 0 30px
+		margin 0 0 2px
+		
+	&-video
+		position absolute
+		left 50%
+		z-index 5
+		margin-left -332px
+		bottom 12.2%
+	
+		&__pic
+			overflow hidden
+			position relative
+			display block
+			width 164px
+			height 164px
+			cursor pointer
+			background-color #3da1e6
+			border 4px solid #e4f4ff
+			border-radius 50%
+			box-shadow 0 6px 8px rgba(0, 0, 0, 0.25), inset 0 6px 7px rgba(0, 0, 0, 0.3)
+			
+			&:before
+				content ''
+				position absolute
+				left 50%
+				top 50%
+				z-index 1
+				width 120px
+				height 120px
+				margin -60px 0 0 -60px
+				border 1px dashed #ffffff
+				border-radius 50%
+				opacity .2
+				transition opacity .2s ease, transform .2s ease
+				
+			&:hover
+				&:before
+					transform scale(1.05)
+				
+			&:after
+				content ''
+				position absolute
+				left 50%
+				top 50%
+				margin -20px 0 0 -17px
+				border-top 20px solid transparent
+				border-bottom 20px solid transparent
+				border-left 37px solid #ffffff
+				
+			&:hover
+				&:before
+					opacity .5
+			
+		&--bg
+			position absolute
+			left 0
+			top 0
+			width 100%
+			height 100%
+			opacity .12
+			
+		&--text
+			position absolute
+			left -139px
+			top 50%
+			display block
+			max-width 118px
+			color #e3e3e3
+			font-size 16px
+			line-height 20px
+			font-family f-roadradio
+			text-transform uppercase
+			margin-top -4px
+			transform translateY(-50%)
+			
+			&:after
+				content ''
+				position absolute
+				left 68px
+				bottom -26px
+				width 75px
+				height 24px
+				background url('../img/hero-video-arrow.png') no-repeat 0 0
+
+.slick-rounded				
+	.slick-prev
+	.slick-next
+		width 50px
+		height 36px
+		cursor pointer
+		background-color colorBlue
+		border-radius 18px
+		transition background-color .2s ease
+		
+		&:before
+			content ''
+			position absolute
+			left 50%
+			top 50%
+			width 20px
+			height 16px
+			margin -8px 0 0 -10px
+			background url('../img/slick-arrow.svg') no-repeat 0 0
+			background-size 100% 100%
+			
+		&:hover
+			background-color #3da4ea
+			box-shadow inset 0 1px 2px rgba(0, 0, 0, 0.25)
+		
+	.slick-next
+		&:before
+			transform rotate(180deg)
+			
+.slick-circled
+	.slick-prev
+	.slick-next
+		z-index 5
+		width 50px
+		height 50px
+		cursor pointer
+		background none
+		border 1px solid #dfdfdf
+		border-radius 50%
+		transition border-color .2s ease
+			
+		svg
+			position absolute
+			left 50%
+			top 50%
+			width 20px
+			height 16px
+			margin -8px 0 0 -10px
+			
+			path
+				fill #dfdfdf
+				transition fill .2s ease
+
+		&:hover
+			border-color colorDark
+			
+			svg
+				path
+					fill colorDark
+
+	.slick-next
+		svg
+			transform  rotate(180deg)
+
+.title-h2
+	display block
+	font-size 32px
+	line-height 42px
+	font-family f-roadradio
+	text-align center
+	padding 0
+	margin 0 0 30px
+
+.steps
+	padding 0 30px
+
+	&__row
+		max-width 1440px
+		padding 89px 0 140px
+		margin 0 auto
+		
+	.title-h2
+		margin-bottom 63px
+		
+	&__grid
+		display flex
+		justify-content space-between
+		
+	&--speedometer
+		position absolute
+		left 0
+		top -1px
+		width 100%
+		height 100%
+	
+		path
+			fill #dfdfdf
+			transition fill .1s ease
+	
+	&-item
+		position relative
+		display block
+		width 254px
+		height 254px
+		margin-bottom -8px
+		
+		&--bg
+			position absolute
+			left 0
+			top 0
+			width 100%
+			height 100%
+			border 1px solid #dfdfdf
+			border-radius 50%
+			transition transform .6s ease
+				
+			&:before
+				content ''
+				position absolute
+				left 50%
+				top 50%
+				width 240px
+				height 240px
+				margin -120px 0 0 -120px
+				border 1px solid #dfdfdf
+				border-radius 50%
+			
+		&:hover
+			& ^[-1]--bg
+				transform scale(1.1)
+		
+		&__content
+			position relative
+			z-index 1
+			text-align center
+			padding 53px 35px 0
+			
+		&--icon
+			display block
+			display flex
+			justify-content center
+			align-items center
+			height 40px
+			text-align center
+			margin 0 0 12px
+			
+			svg
+				fill colorBlue
+
+		p
+			font-size 16px
+			line-height 22px
+			font-family f-idealist
+			margin 0
+			
+.calc
+	position relative
+	padding 1px 30px
+	background #f6f5f9 url('../img/calc-bg.jpg') repeat
+	box-shadow 0 10px 10px rgba(0, 0, 0, 0.24)
+	
+	&--anchor
+		position absolute
+		left 0
+		top -47px
+	
+	&-progress
+		position relative
+		display flex
+		justify-content space-between
+		max-width 1440px
+		min-height 62px
+		text-align center
+		padding 10px 0
+		margin -28px auto 0
+		background-color #383838
+		border-radius 31px
+		box-shadow inset 0 2px 4px rgba(0, 0, 0, 0.7)
+		
+		&--num
+			display inline-block
+			min-width 42px
+			height 42px
+			color #ffffff
+			font-size 21px
+			line-height 25px
+			font-family f-roadradio
+			text-align center
+			padding 6px 5px 7px
+			margin 0 10px
+			border 2px solid #ffffff
+			border-radius 21px
+			transition background-color .3s ease
+			
+			&.is-active
+				color #272727
+				cursor pointer
+				background-color #ffffff
+
+		&--line
+			position absolute
+			top 50%
+			height 2px
+			margin-top -1px
+			
+			&:before
+			&:after
+				content ''
+				position absolute
+				left 0
+				top 0
+
+			&:before
+				width 100%
+				border-bottom 2px dashed #ffffff
+				opacity .5
+				
+			&:after
+				width 0
+				border-bottom 2px solid #9c9c9c
+				transition width .5s ease
+				
+			&.is-active
+				&:after
+					width 100%
+					
+	&-content
+		overflow hidden
+		margin 0 -30px
+		
+		&__item
+			// min-height 787px
+			padding 1px 0
+			margin -1px 0
+			
+		.slick-active
+			& ^[-1]__row
+				transform translateY(0)
+				opacity 1
+
+		&__row
+			position relative
+			display flex
+			justify-content space-between
+			align-items flex-start
+			flex-wrap wrap
+			max-width 1500px
+			font-size 0
+			padding 0 30px
+			margin 32px auto 80px
+			transform translateY(15px)
+			opacity 0
+			transition transform .25s ease, opacity .25s ease
+			transition-delay .25s, .25s
+			
+			&_bg
+				padding-bottom 132px
+				margin-bottom 135px
+
+				&:after
+					content ''
+					position absolute
+					left 40px
+					top 0
+					width calc(100% - 80px)
+					height 100%
+					background-color #ffffff
+					box-shadow 0 2px 6px rgba(0, 0, 0, 0.08)
+					
+				& ^[-3]--photo
+					top 100%
+					margin-top -134px
+					
+		&__lc
+			display flex
+			justify-content space-between
+			align-items flex-start
+			flex-wrap wrap
+			width calc(100% - 420px)
+			max-width 860px
+
+	&--num
+		position absolute
+		left -292px
+		top 200px
+		top 88px
+		width 375px
+		height 375px
+		color rgba(232,232,232,.5)
+		font-size 215px
+		line-height 355px
+		font-family f-roadradio
+		letter-spacing .05em
+		text-align center
+		padding-bottom 14px
+		border-radius 50%
+		border 3px solid rgba(232,232,232,.5)
+			
+	&--photo
+		position absolute
+		left 50%
+		top 108px
+		z-index 1
+		width 534px
+		height 268px
+		margin-left -295px
+		transition opacity .3s ease
+
+		&.is-hidden
+			opacity 0
+
+	&-form
+		position relative
+		z-index 2
+		display inline-block
+		width 360px
+		margin 25px 10px 0
+		
+		&--title
+			display block
+			font-size 22px
+			line-height 26px
+			font-weight bold
+			font-family f-roadradio
+			text-transform uppercase
+			margin 0 -10px 29px 0
+			
+			& + ^[-1]--message
+				margin-top -15px
+			
+		&--message
+			display block
+			font-size 15px
+			line-height 24px
+			margin 0 10px 24px 0
+			
+			a
+				border-bottom 2px solid colorBlue
+			
+		&__item
+			display inline-block
+			width 100%
+			margin 0 0 36px
+			
+			&_half
+				width calc(100% + 20px)
+				margin-right -20px
+				
+				& ^[-2]__input
+					display inline-block
+					width 50%
+					padding-right 20px
+			
+		&--label
+			display block
+			color #7a7a7a
+			font-size 14px
+			line-height 20px
+			margin 0 0 3px
+			
+		&__input
+			position relative
+			
+			input
+			textarea
+				width 100%
+				font-size 15px
+				padding 14px 16px 15px
+				background-color #ffffff
+				border 2px solid colorBlue
+				
+				&.is-date
+					padding-right 48px
+
+			textarea
+				resize vertical
+				
+		.icon-calendar
+			position absolute
+			right 0
+			top 0
+			z-index 1
+			display inline-block
+			width 50px
+			height 50px
+			background url('../img/icon-calendar.svg') no-repeat 16px 14px
+
+	&-address
+		margin -6px -30px 30px 0
+		
+		&__label
+			position relative
+			display block
+			padding 16px 30px 24px 51px
+			margin 0 0 15px
+			
+			.radio
+				position absolute
+				left 18px
+				top 18px
+			
+			&.is-active
+				background-color #ffffff
+				box-shadow 0 0 6px rgba(0, 0, 0, 0.09)
+			
+		&--title
+			display block
+			font-size 20px
+			line-height 24px
+			margin 0 0 9px
+			
+		p
+			color #7a7a7a
+			font-size 15px
+			line-height 22px
+			margin 0 0 2px
+				
+	&-color
+		font-size 0
+		margin 14px -5px -13px 0
+		
+		&--item
+			display inline-block
+			width 46px
+			height 46px
+			cursor pointer
+			padding 3px
+			margin 0 5px 5px 0
+			border 2px solid transparent
+			border-radius 50%
+			
+			span
+				overflow hidden
+				position relative
+				display block
+				width 36px
+				height 36px
+				border 1px solid #d1d1d1
+				border-radius 50%
+				
+			&.is-active
+				border-color colorBlue
+				
+	&-about
+		position relative
+		z-index 2
+		display inline-block
+		width 400px
+		padding 25px 37px 35px
+		margin 0 10px 30px
+		background-color #ffffff
+		box-shadow 0 2px 6px rgba(0, 0, 0, 0.08)
+		
+		&--title
+			display block
+			font-size 26px
+			line-height 28px
+			font-family f-roadradio
+			letter-spacing .025em
+			text-transform uppercase
+			margin 0 0 21px
+			
+		p
+			font-size 15px
+			line-height 22px
+			margin 0 0 8px
+			
+		&_total
+			box-shadow none
+			
+			&:before
+				content ''
+				position absolute
+				left 0
+				top 13px
+				width 1px
+				height calc(100% - 28px)
+				background-color #dddddd
+			
+			& ^[-2]-price
+				margin-top 0
+				
+		&--agreement
+			max-width 240px
+			margin -9px 0 29px
+			
+			label
+				position relative
+				display inline-block
+				font-size 14px
+				line-height 18px
+				padding-left 32px
+				
+				.checker
+					position absolute
+					left 0
+					top 50%
+					margin-top -14px
+			
+	&-price
+		margin 35px 0 39px
+		
+		&__row
+			display flex
+			align-items flex-start
+			margin 0 0 10px
+			
+		&--title
+			display block
+			font-size 20px
+			line-height 28px
+			font-weight bold
+			font-family f-roadradio
+			margin 0 0 17px
+		
+		&--num
+			position relative
+			display inline-block
+			font-size 24px
+			line-height 30px
+			white-space nowrap
+			padding-right 12px
+			
+			span
+				position relative
+				display block
+				height 35px
+				padding 2px 10px 1px 10px
+				border 1px solid #fa5a5a
+				border-right-width 0
+				border-radius 4px 0 0 4px
+				
+				&:after
+					content ''
+					position absolute
+					right -12px
+					top -1px
+					width 12px
+					height 35px
+					background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAABGCAYAAADW81R/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAvNJREFUeNq0mHmIjGEYwL8d064j2+aMyAopK8UfrpTasvwhZ6RBi7KuKDkyWGvsWhJy5WbVKlIkSqJcKUSOQnJGNqEUOy12mfV78ky9bdLszPM+9Wu+P6b5vfN93/scb1Z9JPI1CIKXcB4Ow/vAMEKQC4OgDJ7DUmtBHhTBGWgF26EaWlgJ5BZdhskwEeIwA45DloXAjbNQqNJpsMFaIHEXJsFvWANjrAUSVyCqt+gItLMWSGyDG9AV9vkQJGAW1MJUGGUtkHgDlXpdns5bFUrhO7vgAwyBCT4Edbp6iYrmbsBQit+THPUK+sFMH4IGWKfX6yHHWiBxEh5BD5jvQ5Bw/sVqaGstkDgHt6BTqmk9lMbeiernMujgQ3AdLmqhivoQJJ9BIyyE7j4ED+AUtIRSH4JAf/gXzIY+PgQv4CiEnVRiKgi0pH7XdD7Qh6AG9mgar/QhkNisTYLU7pE+BF+0vEps8iGQ2AGfYBiM8yGodZ7BRvd3rQQS++Et9IfpPgQ/tRhJxCDbWhBo0/wUesJcHwJpN9fqtbSdra0FyQb6DnSBJT4EksYP6HWJD4FEsX5W+RAUasqQHb7ThyCZurfCN2vBaBgOn2G3j9c0OXJt0VnPVDAWBsNH2GudKrI0PSRTdp21YLwO8zXOHjATNF39D2vBFBgA7+CQdUULOR23FJp6a4GcBhTosFhl3VWEndWX6xRkKohAXz1rqrbu7NzVx7RHNRVIOu4Fz+CEdXed7ZTFmJZJU8EcyIfHOiOYTjg5WsyTq09YC0qgGzyE09ZTphwYrnKm/UZrwQI9nLqn87LppN8GVup1Waqrb45gEXSG23DB+rRFziRWOKs3P5BarEcGN+GStaC9s/rSdAvG/0I2U56eTVyzFozQV1Py/PJMSt6/oqPm+JAW8ieWglzdSPn6YCsyLdpu9NZ7PRReB3+P/BsyEYR1lxZoAZ8nY48WkiKdfYNMBfEm08kxfffjFi1fWG+BtB1X4SDct2y3/wgwABKVl8agCAcDAAAAAElFTkSuQmCC') no-repeat 0 0
+					background-size 100% 100%
+					
+			&.is-final
+				span
+					color #ffffff
+					background-color #c83232
+					border-color #c83232
+					
+					&:after
+						background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAABGCAYAAADW81R/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAeZJREFUeNq0mEsoRGEYhs8wuRULSVGShY1sTElWbJSVlJLCwoJkocQGTeMyKElJkVvUKKVsKMmGhcUsJAtKEuWyQCmS5P6+NVOTonN733q25/nPOf/5vu8/nrDP92gYxhnYAPPg2nAxcSAN+EAAnIIOtwWxSQbjIATiFYJoGsAy8KgETB0YUAqYXlCpFPARLYB0lYDJBtNKAVMLKpQCZtDOrrIiKAHVSgETtPoBWhUUgEalgOkDiUpBLmhVCpgekKoUZJot63EOykwnyFAK2Ki6lQKmDeQoBUnArxQwTSBfKfBGCqFMEC3nRUoBy/iwUmBEeneZUsCMqAWloEopYIZir6sQFIJ6pYDpBwlKQR5oVgqiY2eKUpAF2pUCpkUtWFQKHsCEUjAGnlSCezCp3Kaj4FkluAVTylLBkv2iEtyAGXXDeVUJLsGcsqOx0bypBBcsC8qpgoPXu0rAf00h5WTH9vihEpyAFeV0zdV/qgRHYFV5wuHqv1SCQ7CmPGXytP+tEuyDdeVJP2B29XYEYbCp/NsSsHq7VgR7YFsp8NvZbmYFW2BXJWCd77L7uZsRsJEfqwR8sUEn5fY/wTmo+asVOhWwkZSDO6ft7reAJWAJFIMrN6YBb+QRcOzYAbPgwM1R70eAAQBKUVEHAgs7fAAAAABJRU5ErkJggg==')
+
+			em
+				display inline-block
+				font-size 18px
+				font-style normal
+				margin 2px 0 -2px
+				
+		&__text
+			padding-left 11px
+			
+			p
+				color #7a7a7a
+				font-size 14px
+				line-height 18px
+				margin -3px 0 0
+				
+				span
+					color #010101
+				
+	&--button
+		display block
+		width 270px
+		font-size 14px
+		padding 14px
+		margin 0 auto 10px
+		border-radius 23px
+		
+		&_mini
+			width 230px
+			
+		&_left
+			margin-left 0
+		
+		&_bordered
+			color #000000
+			padding 13px
+			background-color #ffffff
+			border 1px solid #55afed
+			
+			&:hover
+				color #000000
+				background-color rgba(0,0,0,.03)
+
+	&-info
+		position relative
+		z-index 2
+		display inline-block
+		width 360px
+		margin 25px 10px -6px
+		
+		&:nth-child(2n+1)
+			margin-left 40px
+
+		&--title
+			display block
+			font-size 20px
+			line-height 28px
+			font-weight bold
+			font-family f-roadradio
+			text-transform uppercase
+			margin 0 0 12px
+			
+		p
+			font-size 15px
+			line-height 22px
+			margin 0 0 10px
+			
+	&-header
+		position relative
+		z-index 2
+		display inline-block
+		width 100%
+		font-size 0
+		margin 26px 0 -4px 40px
+		
+		&--title
+			display inline-block
+			color #010101
+			font-size 26px
+			line-height 32px
+			font-family f-roadradio
+			text-transform uppercase
+			margin 0 25px 10px 0
+			
+		&--doc
+			display inline-block
+			font-size 13px
+			line-height 16px
+			font-family f-idealist
+			text-transform uppercase
+			letter-spacing .025em
+			cursor pointer
+			padding 12px 22px
+			margin -6px 0 6px
+			background transparent
+			border 1px solid #55afed
+			border-radius 21px
+			transition background-color 0.2s ease, box-shadow 0.2s ease
+			
+			&:before
+				content ''
+				display inline-block
+				width 19px
+				height 21px
+				margin -3px 9px -2px 0
+				background url('../img/icon-pdf.svg') no-repeat -1px 0
+				
+			&:hover
+				background-color rgba(0,0,0,0.03)
+				box-shadow inset 0 1px 2px rgba(0,0,0,0.25)
+				
+	&-result
+		position relative
+		z-index 2
+		width 100%
+		padding 0 30px
+		margin 0 10px
+		background #ffffff
+		box-shadow 0 2px 6px rgba(0, 0, 0, 0.08)
+		
+		&__row
+			max-width 320px
+			padding 45px 0 28px
+			margin 0 auto
+			
+		&--title
+			display block
+			color #010101
+			font-size 26px
+			line-height 32px
+			font-family f-roadradio
+			text-transform uppercase
+			letter-spacing .025em
+			margin 0 0 11px
+			
+		p
+			font-size 15px
+			line-height 24px
+			margin 0
+			
+		.btn
+			padding 15px 27px 13px
+			margin 20px 0 20px
+			border-radius 23px
+
+.benefits
+	position relative
+	padding 0 30px
+	
+	&:before
+		content ''
+		position absolute
+		left 0
+		top 0
+		width 100%
+		height 100%
+		background #000000
+		opacity .85
+	
+	&__row
+		position relative
+		z-index 1
+		max-width 1440px
+		padding 52px 0 85px
+		margin 0 auto
+		
+	.title-h2
+		color #ffffff
+		margin-bottom 49px
+		
+	&__grid
+		display flex
+		font-size 0
+		margin 0 -2px
+		
+	&-item
+		position relative
+		display inline-block
+		width 25%
+		width calc(25% - 4px)
+		margin 0 2px 4px
+		margin 0 calc(2px) 4px
+		background #ffffff
+			
+		&:before
+			content ''
+			position absolute
+			left 0
+			top 0
+			width 100%
+			height 100%
+			background #ffffff
+			transition all .3s ease
+		
+		&:hover
+			z-index 1
+
+			&:before
+				left -2.8%
+				top -3.9%
+				width 105.6%
+				height 107.8%
+				box-shadow 0 0 8px rgba(0, 0, 0, 0.12)
+		
+		&__content
+			position relative
+			z-index 1
+			min-height 260px
+			padding 25px 25px 37px 29px
+			
+		&--icon
+			display flex
+			align-items center
+			height 64px
+			margin 0 0 12px
+			
+			path
+				fill colorBlue
+				
+		&--title
+			display block
+			font-size 20px
+			line-height 23px
+			font-family f-idealist
+			margin 0 0 10px
+			
+		p
+			color colorDark
+			font-size 15px
+			line-height 22px
+			margin 0
+			
+.play-icon
+	position absolute
+	left 50%
+	top 50%
+	display block
+	width 64px
+	height 64px
+	cursor pointer
+	margin -32px 0 0 -32px
+	border 5px solid #ffffff
+	border-radius 50%
+	opacity .8
+	transition opacity .2s ease
+	
+	&:before
+		content ''
+		position absolute
+		left 50%
+		top 50%
+		margin -13px 0 0 -8px
+		border-top 13px solid transparent
+		border-bottom 13px solid transparent
+		border-left 23px solid #ffffff
+		
+	&:hover
+		opacity 1
+
+.reviews
+	position relative
+	z-index 1
+
+	&__row
+		overflow hidden
+		max-width 1500px
+		padding 96px 30px 57px
+		margin 0 auto
+		
+	.title-h2
+		margin-bottom 66px
+		
+	&-slider
+		max-width 670px
+		padding-bottom 77px
+		margin 0 auto
+		
+		.slick-prev
+		.slick-next
+			position absolute
+			bottom 0
+			
+		.slick-prev
+			left 50%
+			margin-left -55px
+			
+		.slick-next
+			right 50%
+			margin-right -55px
+			
+		.slick-list
+			overflow visible !important
+			
+		.slick-slide
+			transform-origin 100% 50%
+			transform scale(0.60526)
+			opacity .34
+			transition transform .5s ease, opacity .5s ease
+			
+		.slick-current
+			transform-origin 50% 50%
+			transform scale(1)
+			opacity 1
+			
+			+ .slick-slide
+				transform-origin 0 50%
+				
+			& ^[-1]-quote
+				transform translateY(0)
+				opacity 1
+
+		&__item
+			padding 0 15px
+			
+		&-content
+			position relative
+			height 380px
+			background-color rgba(0, 0, 0, 0.1)
+			border 8px solid #ffffff
+			box-shadow 0 7px 31px rgba(0, 0, 0, 0.3)
+			
+		&-quote
+			position absolute
+			left 11.538%
+			top 50%
+			z-index 1
+			width 76.923%
+			padding 33px 30px 13px 66px
+			margin-top 23px
+			background-color #ffffff
+			border-radius 14px
+			box-shadow 0 0 12px rgba(0, 0, 0, 0.15)
+			transition transform .4s ease, opacity .4s ease
+			transition-delay .1s, .1s
+			transform translateY(-50px)
+			opacity 0
+			
+			&:before
+				content ''
+				position absolute
+				left 5px
+				top -28px
+				width 58px
+				height 31px
+				background url('../img/reviews-arrow.png') no-repeat 0 0
+				background-size 100% 100%
+			
+			&:after
+				content '“'
+				position absolute
+				left 8px
+				top 5px
+				color #eaeaea
+				font-size 280px
+				line-height 220px
+				font-family f-idealist
+			
+			p
+				position relative
+				z-index 1
+				font-size 14px
+				line-height 20px
+				margin 0 0 17px
+				
+.news
+	position relative
+	padding 0 30px
+
+	&--car
+		position absolute
+		left 50%
+		top -149px
+		display block
+		width 747px
+		height 405px
+		margin-left -960px
+		background url('../pic/news-car.jpg') no-repeat 0 0
+		
+	&:after
+		content ''
+		position absolute
+		right 50%
+		top -351px
+		width 355px
+		height 680px
+		margin-right -960px
+		background url('../img/news-triangle.png') no-repeat 100% 100%
+		
+	@media (min-width 1920px)
+		&--car
+			left 0
+			margin-left 0
+			
+		&:after
+			right 0
+			margin-right 0
+
+	&__row
+		position relative
+		z-index 1
+		max-width 1440px
+		padding 80px 0 47px
+		margin 0 auto
+		
+	.title-h2
+		margin-bottom 63px
+		
+	&__grid
+		position relative
+		font-size 0
+		margin 0 -23px 0 -22px
+		
+		.slick-prev
+		.slick-next
+			position absolute
+			margin-top -47px
+		
+		.slick-prev
+			left -53px
+			top 50%
+		
+		.slick-next
+			right -53px
+			top 50%
+		
+	&__col
+		display inline-block
+		width 33.33%
+		padding 0 23px 0 22px
+		
+.item-news
+	overflow hidden
+	position relative
+	display block
+	height 300px
+	margin 0 0 45px
+	
+	&:before
+		content ''
+		position absolute
+		left 0
+		top 0
+		z-index 1
+		width 100%
+		height 100%
+		background-color rgba(0, 0, 0, 0.65)
+		
+	&--bg
+		position absolute
+		left 0
+		top 0
+		width 100%
+		height 100%
+		transition transform .75s ease
+	
+	&:hover
+		& ^[0]--bg
+			transform scale(1.05)
+			
+	&--title
+		position absolute
+		left 0
+		bottom 0
+		z-index 2
+		display block
+		width 100%
+		color #ffffff
+		font-size 24px
+		line-height 32px
+		font-family f-idealist
+		padding 0 8.2222% 42px
+		
+		&:after
+			content ''
+			position absolute
+			left 8.2222%
+			bottom 26px
+			width 34px
+			height 3px
+			background-color colorBlue
+			border-radius 2px
+			
+.about
+	position relative
+	
+	&:before
+		content ''
+		position absolute
+		left 50%
+		bottom 0
+		width 318px
+		height 518px
+		margin-left -960px
+		background url('../img/about-triangle.png') no-repeat 0 100%
+
+	@media (min-width 1920px)
+		&:before
+			left 0
+			margin-left 0
+	
+	&__row
+		overflow hidden
+		position relative
+		z-index 1
+		max-width 1500px
+		padding 80px 30px 99px
+		margin 0 auto
+		
+	&-content
+		position relative
+		max-width 1090px
+		min-height 440px
+		padding 45px 340px 37px 58px
+		margin 0 auto
+		background-color #f4f3f8
+		
+		&--car
+			position absolute
+			right -52px
+			top 50%
+			display block
+			width 350px
+			height 195px
+			margin-top -100px
+			background url('../pic/about-car.png') no-repeat 0 0
+			background-size contain
+		
+		p
+			font-size 15px
+			line-height 22px
+			margin 0 0 8px
+		
+		&--title
+			display block
+			font-size 32px
+			line-height 38px
+			font-family f-roadradio
+			margin 0 0 29px
+			
+.gallery
+	font-size 0
+	
+	.slick-prev
+	.slick-next
+		position absolute
+		top 50%
+		width 46px
+		height 46px
+		margin-top -23px
+		
+		&:hover
+			border-color #ffffff
+
+			svg
+				path
+					fill #ffffff
+
+	.slick-prev
+		left 50%
+		margin-left -806px
+		
+	.slick-next
+		right 50%
+		margin-right -806px
+	
+	&--item
+		display inline-block
+		width 25%
+		height 320px
+		
+.footer
+	background-color #1e1d1e
+	
+	&__social
+		max-width 1190px
+		font-size 0
+		text-align center
+		padding 18px 18px 16px
+		margin 0 auto
+		
+		a
+			position relative
+			display inline-block
+			width 44px
+			height 44px
+			margin 0 12px
+			opacity .7
+			transition opacity .2s ease
+			
+			img
+			svg
+				position absolute
+				left 50%
+				top 50%
+				transform translate(-50%, -50%)
+				
+			svg
+				path
+					fill #ffffff
+					
+			&:hover
+				opacity 1
+				
+	&-content
+		border-top 2px solid rgba(255,255,255,.1)
+		border-bottom 2px solid rgba(255,255,255,.1)
+		
+		&__row
+			display flex
+			justify-content space-between
+			max-width 1190px
+			font-size 0
+			padding 0 30px
+			margin 0 auto
+			
+		&__rc
+			display inline-block
+			font-size 0
+			padding 15px 0 14px
+			
+		.btn
+			min-width 214px
+			padding 12px 10px 8px
+			margin 0 0 0 20px
+			
+	&--email
+		display inline-block
+		color #ffffff
+		font-size 15px
+		line-height 18px
+		font-family f-segoe
+		padding 5px
+		margin 5px 0 7px
+		
+		&:before
+			content ''
+			display inline-block
+			width 16px
+			height 12px
+			margin 5px 9px 1px 0
+			background url('../img/icon-email.svg') no-repeat 0 -2px
+			background-size 16px auto
+		
+		span
+			position relative
+			
+			&:after
+				content ''
+				position absolute
+				left 0
+				bottom 0
+				width 100%
+				border-bottom 1px solid #8b8b8b
+				
+		&:hover
+			span
+				&:after
+					opacity 0
+
+	&-call
+		display inline-block
+		color #ffffff
+		font-family f-segoe
+		text-align center
+		margin 0 0 -4px 20px
+		
+		&--phone
+			display block
+			color #ffffff
+			font-size 24px
+			line-height 30px
+			margin 0 0 -2px
+			
+		&--text
+			display block
+			font-size 12px
+			line-height 16px
+			
+	&-nav
+		display inline-block
+		margin 0 -10px
+		
+		a
+			position relative
+			display inline-block
+			color #ffffff
+			font-size 15px
+			line-height 20px
+			font-family f-idealist
+			text-transform uppercase
+			letter-spacing .05em
+			padding 26px 10px 23px
+			margin-right 17px
+		
+			&:after
+				content ''
+				position absolute
+				left 10px
+				bottom 23px
+				width calc(100% - 20px)
+				border-bottom 1px solid #8b8b8b
+				opacity 0
+				transition opacity .2s ease
+				
+			&:hover
+				&:after
+					opacity 1
+					
+	&__row
+		position relative
+		display flex
+		align-items center
+		justify-content space-between
+		max-width 1190px
+		height 138px
+		font-size 0
+		padding 20px 30px
+		margin 0 auto
+		
+	&__text
+		display inline-block
+		margin-top -14px
+		
+		&--copy
+			display block
+			color #ffffff
+			font-size 14px
+			line-height 20px
+			margin 9px 0
+			
+		&--agreement
+			display block
+			font-size 13px
+			line-height 20px
+			margin 9px 0
+			
+			a
+				position relative
+				color #818181
+				
+				&:after
+					content ''
+					position absolute
+					left 0
+					bottom -1px
+					width 100%
+					border-bottom 1px dotted #818181
+					
+				&:hover
+					&:after
+						opacity 0
+		
+	&--logo
+		position absolute
+		left 50%
+		top 50%
+		width 174px
+		height 81px
+		margin -41px 0 0 -87px
+		background url('../img/footer-logo.png') no-repeat 50% 50%
+		
+	&-payment
+		display inline-block
+		align-self flex-start
+		margin 0 -6px -6px 0
+		
+		&--title
+			display block
+			color #ffffff
+			font-size 14px
+			line-height 20px
+			margin 0 6px 11px 0
+			
+		&--item
+			overflow hidden
+			position relative
+			display inline-block
+			width 70px
+			height 34px
+			margin 0 6px 6px 0
+			background #ffffff
+			border-radius 5px
+			box-shadow inset 0 1px 1px rgba(0, 0, 0, 0.5)
+			
+			img
+			svg
+				position absolute
+				left 50%
+				top 50%
+				transform translate(-50%, -50%)
+
+.fade-bg
+	position fixed
+	left 0
+	top 0
+	z-index 1000
+	width 100%
+	height 100%
+	background rgba(0,0,0,.75)
+	opacity 0
+	visibility hidden
+	transition opacity .4s ease, visibility .4s ease
+	
+	&.is-opened
+		opacity 1
+		visibility visible
+
+.modal
+	position absolute
+	left 50%
+	top 0
+	z-index 1010
+	width 1230px
+	padding 89px 50px 40px
+	margin-left -615px
+	background #ffffff
+	opacity 0
+	visibility hidden
+	transform translateY(20px)
+	transition opacity .4s ease, transform .4s ease, visibility .4s ease
+	
+	&.is-opened
+		opacity 1
+		visibility visible
+		transform translateY(0)
+
+	&--close
+		position absolute
+		right 30px
+		top 30px
+		display block
+		width 60px
+		height 60px
+		cursor pointer
+		background-color #e7e7e7
+		border-radius 50%
+		
+		&:before
+		&:after
+			content ''
+			position absolute
+			left 50%
+			top 50%
+			width 26px
+			height 2px
+			margin -1px 0 0 -13px
+			background #000000
+			
+		&:before
+			transform rotate(-45deg)
+			
+		&:after
+			transform rotate(45deg)
+		
+	&--title
+		display block
+		font-size 32px
+		line-height 42px
+		font-family f-roadradio
+		text-align center
+		text-transform uppercase
+		padding 0
+		margin 0 0 57px
+		
+.faq
+	margin 0 0 40px
+	
+	&__item
+		border-bottom 1px solid #d5d5d5
+		
+	&--title
+		position relative
+		display block
+		font-size 26px
+		line-height 32px
+		font-family f-idealist
+		cursor pointer
+		padding 13px 0 15px 40px
+		
+		&:before
+		&:after
+			content ''
+			position absolute
+			background #bababa
+			
+		&:before
+			left 0
+			top 29px
+			width 20px
+			height 2px
+			
+		&:after
+			left 9px
+			top 20px
+			width 2px
+			height 20px
+			transition all .2s ease
+			
+		&.is-active
+			&:after
+				top 29px
+				height 2px
+				
+	&__content
+		display none
+		padding 10px 0 29px 40px
+		
+		p
+			font-size 15px
+			line-height 22px
+			margin 0 0 10px
+			
+		ul
+			margin 0 0 10px
+			
+			li
+				position relative
+				font-size 15px
+				line-height 22px
+				padding-left 42px
+				margin 0 0 8px
+				
+				&:before
+					content ''
+					position absolute
+					left 20px
+					top 8px
+					width 8px
+					height 8px
+					background-color #55afed
+					border-radius 50%
+					
+.form
+	max-width 360px
+	margin 0 auto 40px
+	
+	&__item
+		margin 0 0 37px
+		
+		input
+		textarea
+			width 100%
+			font-size 15px
+			padding 14px 16px 15px
+			border 2px solid colorBlue
+			
+			&.is-error
+				color #e73c3c
+				border-color #e73c3c
+			
+		textarea
+			resize vertical
+			
+	&--message
+		display block
+		font-size 13px
+		line-height 16px
+		margin 3px 18px -19px
+		
+		&_error
+			color #e73c3c
+			
+	&--agreement
+		max-width 240px
+		margin -7px 0 29px
+		
+		label
+			position relative
+			display inline-block
+			font-size 14px
+			line-height 18px
+			padding-left 32px
+			
+			.checker
+				position absolute
+				left 0
+				top 50%
+				margin-top -16px
+				
+	.btn
+		display block
+		width 210px
+		padding 15px 15px 13px
+		margin 0 auto
+		border-radius 23px
+		
+.menu-m
+	display none
+	
+.ui-datepicker
+	position relative
+	width 360px
+	padding 6px 3px 4px
+	background-color #ffffff
+	border-left 2px solid #55afed
+	border-right 2px solid #55afed
+	
+	&:before
+	&:after
+		content ''
+		position absolute
+		left -2px
+		width calc(100% + 4px)
+		height 2px
+		background-color #55afed
+	
+	&:before
+		top -2px
+	
+	&:after
+		bottom -2px
+	
+	&-header
+		position relative
+		height 33px
+		text-align center
+		padding 5px 34px 4px
+		margin 0 3px 6px
+		background-color #e8e8e8
+		border-radius 3px
+		
+	&-title
+		display inline-block
+		font-size 16px
+		line-height 24px
+		
+	&-prev
+	&-next
+		position absolute
+		top 0
+		z-index 1
+		display block
+		width 30px
+		height 33px
+		cursor pointer
+		
+		&:before
+			content ''
+			position absolute
+			top 7px
+			width 18px
+			height 18px
+			background-color #55afed
+			border-radius 50%
+			
+		&:after
+			content ''
+			position absolute
+			top 12px
+			border-top 4px solid transparent
+			border-bottom 4px solid transparent
+			
+	&-prev
+		left 0
+		
+		&:before
+			left 6px
+			
+		&:after
+			left 11px
+			border-right 6px solid #e8e8e8
+			
+	&-next
+		right 0
+		
+		&:before
+			right 6px
+			
+		&:after
+			right 11px
+			border-left 6px solid #e8e8e8
+			
+	&-calendar
+		width 100%
+		margin 0
+		
+		th
+			padding 2px 3px
+			
+			span
+				display block
+				color #7a7a7a
+				font-size 15px
+				line-height 20px
+				font-weight normal
+				text-align center
+				padding 3px 0
+				
+		td
+			padding 3px
+			
+			a
+				display block
+				font-size 15px
+				line-height 20px
+				text-align center
+				padding 3px 0
+				background #ffffff
+				border 1px solid #5e5e5e
+				border-radius 3px
+
+			.ui-state-active
+				color #ffffff
+				background-color #2d91d6
+				border-color #2d91d6
+
+@media (max-width 1671px)
+	.gallery
+		.slick-prev
+			left 30px
+			margin-left 0
+
+		.slick-next
+			right 30px
+			margin-right 0
+		
+@media (max-width 1499px)
+	.header
+		&__cc
+			width calc(100% - 175px)
+			max-width none
+			padding-right 0
+			
+		&__content
+			margin-right 240px
+			
+		&--slogan
+			margin-left -28px
+			
+		&--find
+		&__call
+			white-space nowrap
+			
+		&__rc
+			position absolute
+			right 30px
+			top 0
+			
+		&.is-fixed
+			.header
+				&__logo
+					width 105px
+
+			.nav
+				float none
+				margin-left -25px
+				
+				a
+					margin-right 20px
+			
+	.nav
+		display inline-block
+		float right
+		
+		a
+			margin-left 29px
+
+			&:first-child
+				margin-left -7px
+				
+	.hero
+		.slick-prev
+		.slick-next
+			left 30px
+			margin-left 0
+			
+		&-video
+			left 266px
+			margin-left 0
+			
+	.steps
+		&__grid
+			display block
+			text-align center
+			margin 0 -50px
+			
+		&-item
+			display inline-block
+			margin-left 50px
+			margin-right 50px
+			
+	.calc
+		&-content
+			&__row
+				padding-left 20px
+				padding-right 20px
+				
+				&_bg
+					margin-bottom 100px
+					&:after
+						left 30px
+						width calc(100% - 60px)
+						
+					.calc--photo
+						margin-top -104px
+				
+		&--num
+			left -106px
+			top 97px
+
+		&-form
+		&-info
+			width 41.86%
+			min-width 272px
+			max-width 360px
+			
+		&-color
+			margin-right -50px
+			
+		&--photo
+			top 92px
+			width 410px
+			height 206px
+			margin-left -220px
+			
+		&-about
+			width 345px
+			padding-left 25px
+			padding-right 25px
+			
+	.benefits
+		&__grid
+			margin 0 -1px 3px 0
+		
+		&-item
+			width calc(25% - 1px)
+			margin 0 1px 1px 0
+			
+			&--title
+				margin-right -10px
+				
+	.news
+		&--car
+			left -272px
+			margin-left 0
+		
+		&__row
+			padding-bottom 28px
+			
+		&__grid
+			margin 0 -15px
+
+		&__col
+			padding 0 15px
+			
+	.item-news
+		margin-bottom 30px
+		
+	.about
+		&__row
+			padding-top 50px
+
+		&-content
+			padding-left 38px
+			padding-right 400px
+			
+			&--car
+				right 22px
+		
+	.modal
+		width 1000px
+		padding-left 30px
+		padding-right 30px
+		margin-left -500px
+
+	.ui-datepicker
+		width 290px
+
+@media (min-width 1500px)
+	.item-news
+		height 300px !important
+		
+@media (max-width 1099px)
+	.wrapper
+		padding-top 60px
+		
+	.menu-open
+		position absolute
+		left 0
+		top 0
+		z-index 5
+		display block
+		width 55px
+		height 60px
+		cursor pointer
+		
+		i
+			position absolute
+			left 15px
+			top 27px
+			width 25px
+			height 3px
+			background-color #ffffff
+			
+			&:before
+			&:after
+				content ''
+				position absolute
+				left 0
+				top 0
+				width 100%
+				height 100%
+				background-color #ffffff
+			
+			&:before
+				margin-top -10px
+			
+			&:after
+				margin-top 10px
+
+	.header
+		position fixed
+	
+		&__row
+			height 60px
+			padding 0 15px
+			
+		&__logo
+			position absolute
+			left 50%
+			width 120px
+			height 60px
+			padding 10px 15px 0
+			margin-left -60px
+			
+			&--img
+				margin-bottom 0
+				
+			&--text
+				display none
+
+		&--slogan
+		&--find
+		&__call
+			display none
+			
+		&__rc
+			right 15px
+			width auto
+			padding-top 11px
+			
+			.btn
+				overflow hidden
+				position relative
+				width 38px
+				white-space nowrap
+				text-indent 38px
+				margin 0
+			
+				&:before
+					position absolute
+					left 50%
+					top 50%
+					margin -10px 0 0 -10px
+					
+		&.is-fixed
+			.header
+				&__row
+					height 60px
+					
+				&__logo
+					width 120px
+					padding 10px 15px 0
+					margin-right 0
+
+					img
+						width auto
+
+	.nav
+		display none
+		
+	.hero
+		display flex
+		font-size 0
+		
+		.slick-prev
+		.slick-next
+			left 50%
+			bottom 16px
+			margin-bottom 0
+			margin-left -55px
+			
+		.slick-next
+			margin-left 5px
+			transform translateX(0)
+		
+		&__row
+			padding 24px 15px 0
+			
+		&--title
+			position static
+			max-width 260px
+			font-size 18px
+			line-height 25px
+			padding 0
+		
+		&-slider
+			display inline-block
+			width 50%
+			
+			&--bg
+				&_desktop
+					display none
+					
+				&_mobile
+					display block
+					
+					&:after
+						content ''
+						position absolute
+						left 0
+						top 0
+						width 100%
+						height 100%
+						background-color rgba(0, 0, 0, 0.6)
+			
+		&__row
+			height auto
+			
+		&-video
+			position relative
+			left auto
+			bottom auto
+			display inline-block
+			width 50%
+			
+			&__pic
+				position absolute
+				left 0
+				top 0
+				width 100%
+				height 100%
+				border-width 0
+				border-radius 0
+				box-shadow inset 0 6px 7px rgba(0, 0, 0, 0.3)
+				
+			&--text
+				z-index 5
+				left 15px
+				top 50%
+				margin-top -12px
+				transform translateY(-50%)
+				
+				&:after
+					display none
+					
+	.title-h2
+		font-size 18px
+		line-height 25px
+		margin-bottom 25px
+		
+	.steps
+		padding 0 15px
+		margin-top 18px
+		
+		&__row
+			padding 20px 0 50px
+			
+		.title-h2
+			margin-bottom 31px
+			
+		&__grid
+			padding-bottom 1px
+			margin 0 -15px
+			
+			.slick-prev
+			.slick-next
+				position absolute
+				bottom 0
+				left 50%
+				z-index 5
+				
+			.slick-prev
+				margin-left -55px
+				
+			.slick-next
+				margin-left 5px
+			
+		&-item
+			margin 0 15px
+
+			&--bg
+				position absolute
+				left 50%
+				width 254px
+				height 254px
+				margin-left -127px
+				
+			&__content
+				max-width 254px
+				margin-left auto
+				margin-right auto
+				
+			&:hover
+				.steps-item--bg
+					transform scale(1)
+					
+	.calc
+		padding 0 15px
+		background #f6f5f9
+		
+		&--anchor
+			top 1px
+			
+		&-progress
+			min-height 54px
+			padding 12px 5px
+			margin 0 -15px
+			border-radius 0
+			
+			&--num
+				min-width 30px
+				height 30px
+				font-size 15px
+				line-height 18px
+				padding 3px 3px 5px
+				
+			&--line
+				transform translateX(5px)
+				
+		&--num
+			left 50%
+			top -58px
+			width 180px
+			height 180px
+			font-size 103px
+			line-height 103px
+			padding 33px 0 0
+			margin-left -90px
+				
+		&-content
+			margin 0 -15px
+			
+			&__row
+				display block
+				padding 0 15px
+				
+			&__lc
+				justify-content space-around
+				width auto
+				max-width none
+				padding-top 15px
+				margin 0 -10px
+				
+			&__row
+				margin-bottom 50px
+				
+				&_bg
+					margin-bottom 50px
+					
+					&:after
+						display none
+						
+		&-header
+			text-align center
+			padding-top 15px
+			margin 0 0 5px
+			
+			&--title
+				display block
+				font-size 22px
+				line-height 26px
+				margin 0 0 15px
+				
+			&--doc
+				margin 0 0 15px
+				background-color #ffffff
+				
+				&:hover
+					background-color #ffffff
+					
+		&-info
+			margin 0 10px 20px
+
+			&:nth-child(2n+1)
+				margin-left 10px
+			
+			&--title
+				line-height 25px
+				
+		&--photo
+			display none
+			
+		&-form
+			margin 0 10px 13px
+
+			&--title
+				font-size 20px
+				line-height 25px
+				margin 0 0 24px
+				
+			&__item
+				margin-bottom 17px
+				
+		&-color
+			margin 5px -5px -5px 0
+			
+		&-about
+			display block
+			width auto
+			max-width 480px
+			padding 17px 15px 20px
+			margin 0 auto 20px
+			
+			&:before
+				display none
+			
+			&--title
+				font-size 22px
+				line-height 26px
+				margin 0 0 23px
+				
+			&--agreement
+				max-width 270px
+				padding-right 30px
+				margin-left auto
+				margin-right auto
+				
+		&-price
+			margin 23px 0 28px
+			
+		&--button
+			width 100%
+			max-width 270px
+			
+			&_left
+				margin-left auto
+				
+		&-result
+			padding 0 15px
+			margin 0
+			background transparent
+			box-shadow none
+			
+			&--title
+				font-size 20px
+				line-height 26px
+				margin 0 0 10px
+			
+			&__row
+				padding 75px 0 15px
+			
+	.benefits
+		padding 0 15px
+		border-top 1px solid #c2c2c2
+		
+		&__row
+			padding 28px 0 34px
+			
+		.title-h2
+			margin-bottom 24px
+		
+		&__grid
+			overflow-x auto
+			padding 0
+			margin 0 -15px
+			-webkit-overflow-scrolling touch
+			
+			&:before
+				content ''
+				flex 0 0 15px
+			
+			&:after
+				content ''
+				flex 0 0 14px
+				
+			&::-webkit-scrollbar
+				display none
+
+		&-item
+			min-width 256px
+
+			&:before
+				display none
+				
+	.reviews
+		margin-top 13px
+
+		&__row
+			padding 20px 15px 20px
+			
+		.title-h2
+			margin-bottom 17px
+
+		&-slider
+			max-width none
+			padding 0 5px 40px
+			margin 0 -15px
+
+			.slick-slide
+				transform scale(1)
+				opacity 1
+					
+				& ^[-1]-quote
+					transform translateY(0)
+					opacity 1
+					
+			&__item
+				padding 0 10px
+				
+			&-quote
+				left -8px
+				top 100%
+				width calc(100% + 16px)
+				padding 33px 15px 18px 33px
+				margin-top -18px
+				
+	.news
+		padding 0 15px
+
+		&--car
+			display none
+			
+		&__row
+			padding 20px 0 15px
+			
+		.title-h2
+			margin-bottom 34px
+			
+		&__grid
+			padding 0 8px 45px 7px
+			
+			.slick-list
+				overflow visible !important
+				
+			.slick-prev
+			.slick-next
+				position absolute
+				top auto
+				bottom 0
+				margin-top 0
+				
+			.slick-prev
+				left 15px
+				
+			.slick-next
+				right 15px
+				
+		&__col
+			padding 0 7px 0 8px
+			
+	.item-news
+		margin-bottom 15px
+		
+		&--title
+			font-size 20px
+			line-height 28px
+			padding 0 15px 42px
+			
+			&:after
+				left 15px
+				bottom 26px
+				
+	.about
+		&:before
+			display none
+			
+		&__row
+			padding 20px 15px 46px
+	
+		&-content
+			&--car
+				top auto
+				right 50%
+				bottom 44px
+				width 215px
+				height 120px
+				margin 0 -105px 0 0
+				
+		&-content
+			min-height 0
+			padding 34px 15px 182px
+			
+			&--title
+				font-size 18px
+				line-height 25px
+				margin 0 0 19px
+				
+				br
+					display none
+					
+			p
+				font-size 15px
+				line-height 22px
+				margin 0 0 8px
+
+	.gallery
+		.slick-prev
+			left 15px
+
+		.slick-next
+			right 15px
+			
+	.footer
+		&__social
+			padding 21px 0 13px
+			
+			a
+				margin 0
+				
+		&-content
+			border-top-width 1px
+			border-bottom-width 1px
+
+			&__row
+				display block
+				padding 21px 15px 4px
+				
+			&__rc
+				display block
+				max-width 290px
+				text-align center
+				padding 0
+				margin 0 auto
+				
+		&--email
+			margin 0 0 10px
+			
+		&-call
+			display block
+			margin 0 0 21px
+			
+		.btn
+			margin 0 0 10px
+
+		&-nav
+			display block
+			max-width 290px
+			margin 0 auto 3px
+			
+			a
+				display block
+				text-align center
+				padding 5px
+				margin 0
+				
+				&:after
+					display none
+					
+		&--logo
+			display none
+		
+		&__row
+			flex-direction column
+			max-width 360px
+			height auto
+			padding 20px 15px 15px
+			margin 0 auto
+			
+		&-payment
+			margin 0 0 14px
+			
+		&__text
+			width 100%
+			order 2
+			margin 0 0 14px
+			
+			&--copy
+				line-height 18px
+				margin 0 0 10px
+			
+			&--agreement
+				line-height 18px
+				margin 0 0 19px
+				
+				a
+					border-bottom 1px dotted #818181
+					&:after
+						display none
+
+	.modal
+		position absolute
+		left 15px
+		top 0
+		width calc(100% - 30px)
+		padding 16px 15px 10px
+		margin-left 0
+		
+		&--close
+			right 15px
+			top 15px
+			width 30px
+			height 30px
+			
+			&:before
+			&:after
+				width 16px
+				margin-left -8px
+				
+		&--title
+			font-size 20px
+			line-height 28px
+			padding 0 40px
+			margin 0 0 20px
+			
+	.form
+		margin 0 auto 20px
+		
+		&__item
+			margin-bottom 17px
+			
+		&--agreement
+			margin 0 0 20px
+			
+	.faq
+		margin 0 0 20px
+
+		&--title
+			font-size 18px
+			padding 8px 0 10px 25px
+			
+			&:before
+				width 12px
+				top 24px
+				
+			&:after
+				left 5px
+				height 12px
+				top 19px
+				
+			&.is-active
+				&:after
+					top 24px
+			
+		&__content
+			padding 0 0 10px 25px
+			
+	body.is-locked
+		overflow hidden
+
+	.menu-m
+		position fixed
+		left -260px
+		top 0
+		z-index 1010
+		display block
+		width 260px
+		height 100%
+		background-color #292929
+		transition transform .4s ease, opacity .4s ease
+		
+		&.is-opened
+			transform translateX(100%)
+		
+		&--close
+			position absolute
+			left 0
+			top 0
+			z-index 5
+			display block
+			width 54px
+			height 58px
+			cursor pointer
+			background url('../img/menu-close.svg') no-repeat 50% 50%
+		
+		&__row
+			overflow-y auto
+			position absolute
+			left 0
+			top 0
+			width 100%
+			height 100%
+			padding 44px 15px 10px
+			
+		.header__call
+			display inline-block
+			padding 13px 15px
+			margin 0
+			
+		.header--find
+			display block
+			width auto
+			color #ffffff
+			text-align left
+			padding 15px 0 15px 15px
+			margin 0
+			border-top 1px solid rgba(186,186,186,.1)
+			border-bottom 1px solid rgba(186,186,186,.1)
+			
+		.nav
+			display block
+			float none
+			padding 12px 0
+			border-top-width 0
+			
+			&__row
+				text-align left
+				margin 0
+				
+			a
+				display block
+				padding 7px 15px
+				margin 0
+				
+				&:first-child
+					margin-left 0
+				
+				&:after
+					display none
+			
+@media (max-width 639px)
+	.hero
+		display block
+		
+		&-slider
+			width 100%
+			
+		&-video
+			width 100%
+			
+			&__pic
+				position relative
+				left auto
+				top auto
+				
+	.calc
+		&-form
+		&-info
+			width 100%
+			
+		&-price
+			margin-bottom 26px
+		
+			&__row
+				display block
+				
+			&__text
+				padding 0
+				margin 4px 0 0
+				
+				p
+					margin-top 0
+			
+	.steps
+		&__grid
+			.slick-prev
+				left 15px
+				margin-left 0
+				
+			.slick-next
+				left auto
+				right 15px
+				margin-left 0
+	
+@media (min-width 640px)
+	.hero-video__pic
+		height 100% !important
+		
+@media (min-width 1100px)
+	.hero
+		&__row
+		&__item
+			height 680px !important
+			
+		&-video
+			&__pic
+				height 164px !important

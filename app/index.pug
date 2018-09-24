@@ -1,0 +1,500 @@
+doctype html
+html(lang='ru')
+	title Avirra
+	meta(charset='utf-8')
+	meta(name='viewport', content='width=device-width, user-scalable=yes')
+	link(href='./css/style.css', rel='stylesheet')
+	body
+		.wrapper(data-anchor-to='0')
+			include modules/header.pug
+			.hero
+				.hero-slider.slick-rounded(data-ratio='0.65625')
+					.hero__item
+						.hero__row.scale
+							span.hero--title Сервис для покупки #[br] новых автомобилей #[br] с доставкой в Ваш город #[br] и оплатой при получении
+						.hero-slider--bg.hero-slider--bg_desktop
+							img.img-cover(src='./pic/intro-1-d.jpg', width='1920', height='680', alt='')
+						.hero-slider--bg.hero-slider--bg_mobile
+							img.img-cover(src='./pic/intro-1-m.jpg', width='1920', height='680', alt='')
+					.hero__item
+						.hero__row.scale
+							span.hero--title Сервис для покупки #[br] новых автомобилей #[br] с доставкой в Ваш город #[br] и оплатой при получении
+						.hero-slider--bg.hero-slider--bg_desktop
+							img.img-cover(src='./pic/intro-1-d.jpg', width='1920', height='680', alt='')
+						.hero-slider--bg.hero-slider--bg_mobile
+							img.img-cover(src='./pic/intro-1-m.jpg', width='1920', height='680', alt='')
+				.hero-video.scale(data-ratio='0.5')
+					span.hero-video--text Заказать автомобиль просто!
+					a.hero-video__pic.scale(href='https://www.youtube.com/watch?v=uiUXLWQH2U4', data-fancybox)
+						.hero-video--bg
+							img.img-cover(src='./pic/hero-video-bg.jpg', width='320', height='160', alt='')
+			.steps
+				.steps__row
+					.title-h2 Всего 5 простых шагов до покупки!
+					.steps__grid.slick-rounded
+						.steps-item
+							.steps-item__content
+								.steps-item--icon
+									include ./img/steps-icon-1.svg
+								p Выберите интересующий #[br] вас автомобиль
+							.steps-item--bg
+								include ./img/speedometer.svg
+						.steps-item
+							.steps-item__content
+								.steps-item--icon
+									include ./img/steps-icon-2.svg
+								p Укажите маршрут #[br] и дату доставки
+							.steps-item--bg
+								include ./img/speedometer.svg
+						.steps-item
+							.steps-item__content
+								.steps-item--icon
+									include ./img/steps-icon-3.svg
+								p Заполните информацию о себе
+							.steps-item--bg
+								include ./img/speedometer.svg
+						br
+						.steps-item
+							.steps-item__content
+								.steps-item--icon
+									include ./img/steps-icon-4.svg
+								p Закажите автомобиль и подтвердите #[br] свой заказ
+							.steps-item--bg
+								include ./img/speedometer.svg
+						.steps-item
+							.steps-item__content
+								.steps-item--icon
+									include ./img/steps-icon-5.svg
+								p Оплатите свой заказ при получении #[br] в вашем городе
+							.steps-item--bg
+								include ./img/speedometer.svg
+			.calc
+				i.calc--anchor(data-anchor-to='1')
+				.calc-progress
+					span.calc-progress--num.is-active(data='1',data-id='1') 1
+					span.calc-progress--num(data='3',data-id='2') 2
+					span.calc-progress--num(data='4',data-id='3') 3
+					span.calc-progress--num(data='5',data-id='4') 4
+					span.calc-progress--num(data='6',data-id='5') 5
+				.calc-content
+					.calc-content__item
+						.calc-content__row
+							span.calc--num 01
+							.calc-content__lc
+								.calc-form
+									span.calc-form--title Выберите автомобиль
+									.calc-form__item
+										span.calc-form--label Марка автомобиля
+										select.select-standart
+											option TOYOTA
+											option HONDA
+									.calc-form__item
+										select.select-standart
+											option Camry
+											option Land Cruiser 200
+											option Land  Cruiser Prado
+											option Fortuner
+									.calc-form__item
+										select.select-standart
+											option Заводская комплектация
+									.calc-form__item
+										select.select-standart
+											option 4,6л Бензин АКПП
+									.calc-form__item
+										span.calc-form--label Цвет кузова
+										.calc-color
+											.calc-color--item.is-active(data='1')
+												span(style='background-color:#fff9dc')
+											.calc-color--item(data='2')
+												span(style='background-color:#bababa')
+											.calc-color--item(data='3')
+												span(style='background-color:#002e61')
+											.calc-color--item(data='4')
+												span(style='background-color:#2e74ca')
+											.calc-color--item(data='5')
+												span(style='background-color:#512f14')
+											.calc-color--item(data='6')
+												span(style='background-color:#ac0505')
+									.calc-form__item
+										span.calc-form--label Цвет салона
+										.calc-color
+											.calc-color--item.is-active(data='1')
+												span
+													img.img-cover(src='./img/color-1.png', width='34', height='34', alt='')
+											.calc-color--item(data='2')
+												span
+													img.img-cover(src='./img/color-2.png', width='34', height='34', alt='')
+											.calc-color--item(data='3')
+												span
+													img.img-cover(src='./img/color-3.png', width='34', height='34', alt='')
+							.calc--photo
+								img.img-contain(src='./pic/calc-car.png', width='534', height='268', alt='')
+							.calc-about
+								span.calc-about--title Toyota #[br] Land Cruiser 200
+								p Комплектация комфорт
+								p АКПП, двигатель 4.6 л бензин, привод полный
+								p Цвет кузова жемчужно-перламутровый 
+								p Цвет салона черная кожа (LF 23)
+								.calc-price
+									.calc-price__row
+										.calc-price--num
+											span 4 799 000 #[em р.]
+										.calc-price__text
+											p Стоимость автомобиля без учета доставки
+								button.calc--button.btn(data-step-go='2') Стоимость доставки
+								button.calc--button.calc--button_bordered.btn(data-step-go='3') Продолжить без доставки
+					.calc-content__item
+						.calc-content__row
+							span.calc--num 02
+							.calc-content__lc
+								.calc-form
+									span.calc-form--title Расчет стоимости доставки
+									.calc-form__item
+										span.calc-form--label Откуда
+										select.select-standart
+											option Москва
+											option Москва
+									.calc-form__item
+										select.select-standart
+											option Куда
+											option Куда
+									.calc-form__item
+										.calc-form__input
+											i.icon-calendar
+											input.input-date(type='text', placeholder='Желаемая дата доставки')
+									span.calc-form--message Если в предложенном списке городов Вы не смогли найти нужный - пожалуйста, обратитесь в службу поддержки для получения индивидуального расчета или напишите нам через #[a(href='javascript:void(0);') форму обратной связи].
+							.calc--photo
+								img.img-contain(src='./pic/calc-car.png', width='534', height='268', alt='')
+							.calc-about
+								span.calc-about--title Toyota #[br] Land Cruiser 200
+								p Комплектация комфорт
+								p АКПП, двигатель 4.6 л бензин, привод полный
+								p Цвет кузова жемчужно-перламутровый 
+								p Цвет салона черная кожа (LF 23)
+								.calc-price
+									.calc-price__row
+										.calc-price--num
+											span 4 799 000 #[em р.]
+										.calc-price__text
+											p Стоимость автомобиля без учета доставки
+									.calc-price__row
+										.calc-price--num.is-final
+											span 4 869 000 #[em р.]
+										.calc-price__text
+											p Стоимость автомобиля с учетом цвета металлик #[span(data-step-go='2') с доставкой]
+								button.calc--button.btn(data-step-go='3') Выбрать автосалон
+					.calc-content__item
+						.calc-content__row
+							span.calc--num 02
+							.calc-content__lc
+								.calc-form
+									span.calc-form--title Выберите автосалон
+									span.calc-form--message Вы сможете самостоятельно забрать ваш автомобиль в одном из салонов:
+									.calc-address
+										label.calc-address__label.is-active
+											input(type='radio', name='r-1', checked)
+											span.calc-address--title Автосалон Avirra в Москве
+											p Адрес: Москва, Каширское ш., 61с7
+											p Телефон: 8 (800) 333-53-87
+											p Email: info@avirra.ru
+										label.calc-address__label
+											input(type='radio', name='r-1')
+											span.calc-address--title Автосалон Avirra в Москве
+											p Адрес: Москва, Каширское ш., 61с7
+											p Телефон: 8 (800) 333-53-87
+											p Email: info@avirra.ru
+							.calc--photo
+								img.img-contain(src='./pic/calc-car.png', width='534', height='268', alt='')
+							.calc-about
+								span.calc-about--title Toyota #[br] Land Cruiser 200
+								p Комплектация комфорт
+								p АКПП, двигатель 4.6 л бензин, привод полный
+								p Цвет кузова жемчужно-перламутровый 
+								p Цвет салона черная кожа (LF 23)
+								.calc-price
+									.calc-price__row
+										.calc-price--num
+											span 4 799 000 #[em р.]
+										.calc-price__text
+											p Стоимость автомобиля без учета доставки
+								button.calc--button.btn(data-step-go='4') Заполнить личные данные
+					.calc-content__item
+						.calc-content__row
+							span.calc--num 03
+							.calc-content__lc
+								.calc-form
+									span.calc-form--title(align='center') Паспортные данные
+									.calc-form__item
+										.calc-form__input
+											input(type='text', placeholder='ФИО')
+									.calc-form__item
+										.calc-form__input
+											i.icon-calendar
+											input.input-date(type='text', placeholder='Дата рождения')
+									.calc-form__item
+										.calc-form__input
+											input(type='text', placeholder='Кем и когда выдан')
+									.calc-form__item.calc-form__item_half
+										.calc-form__input
+											input(type='text', placeholder='Серия')
+										.calc-form__input
+											input(type='text', placeholder='Номер')
+									.calc-form__item
+										.calc-form__input
+											input(type='text', placeholder='Адрес регистрации')
+								.calc-form
+									span.calc-form--title(align='center') Контактная информация
+									.calc-form__item
+										.calc-form__input
+											input(type='text', placeholder='Как к вам обращаться')
+									.calc-form__item
+										.calc-form__input
+											input(type='text', placeholder='+7 (___)____-__-__')
+									.calc-form__item
+										.calc-form__input
+											input(type='text', placeholder='Электронная почта')
+									span.calc-form--title(align='center') Адрес
+									.calc-form__item
+										.calc-form__input
+											input(type='text', placeholder='Регион, город, улица, дом')
+							.calc--photo.is-hidden
+								img.img-contain(src='./pic/calc-car.png', width='534', height='268', alt='')
+							.calc-about
+								span.calc-about--title Toyota #[br] Land Cruiser 200
+								p Комплектация комфорт
+								p АКПП, двигатель 4.6 л бензин, привод полный
+								p Цвет кузова жемчужно-перламутровый 
+								p Цвет салона черная кожа (LF 23)
+								.calc-price
+									.calc-price__row
+										.calc-price--num
+											span 4 799 000 #[em р.]
+										.calc-price__text
+											p Стоимость автомобиля без учета доставки
+									.calc-price__row
+										.calc-price--num.is-final
+											span 4 869 000 #[em р.]
+										.calc-price__text
+											p Стоимость автомобиля с учетом цвета металлик #[span(data-step-go='2') с доставкой]
+								button.calc--button.calc--button_mini.btn(data-step-go='5') Оформить заказ
+					.calc-content__item
+						.calc-content__row.calc-content__row_bg
+							span.calc--num 04
+							.calc-header
+								span.calc-header--title Заказ №378456873456
+								button.calc-header--doc Договор поставки
+							.calc-content__lc
+								.calc-info
+									span.calc-info--title Автомобиль
+									p #[strong Toyota Land Cruiser 200]
+									p Комплектация комфорт
+									p АКПП, двигатель 4.6 л бензин, привод полный
+									p Цвет кузова жемчужно-перламутровый 
+									p Цвет салона черная кожа (LF 23)
+								.calc-info
+									span.calc-info--title Паспортные данные
+									p Иван Андреевич Басдропов
+									p Дата рождения 13.10.1989
+									p Паспорт выдан отделом УФМС по Алтайскому Краю г. Барнаул
+									p Серия 0101 номер 606101
+								.calc-info
+									span.calc-info--title Доставка
+									p Откуда: Москва
+									p Куда: Барнаул
+									p Желаемая дата доставки: 10.09.2018
+								.calc-info
+									span.calc-info--title Контактная информация, адрес
+									p Иван Андреевич Басдропов
+									p +7-929-000-00-00
+									p test@test.ru
+									p Алтайский край, г. Барнаул, ул. Шумакова, 74 Б
+							.calc--photo
+								img.img-contain(src='./pic/calc-car.png', width='534', height='268', alt='')
+							.calc-about.calc-about_total
+								.calc-price
+									.calc-price--title Стоимость
+									.calc-price__row
+										.calc-price--num
+											span 4 799 000 #[em р.]
+										.calc-price__text
+											p Стоимость автомобиля без учета доставки
+									.calc-price__row
+										.calc-price--num.is-final
+											span 4 869 000 #[em р.]
+										.calc-price__text
+											p Стоимость автомобиля #[span(data-step-go='2') с доставкой]
+								.calc-about--agreement
+									label #[input(type='checkbox', checked)] Я даю согласие на обработку персональных данных
+								button.calc--button.calc--button_mini.calc--button_left.btn(data-step-go='6') Оплатить онлайн
+								button.calc--button.calc--button_mini.calc--button_left.calc--button_bordered.btn(data-step-go='6') Счет на оплату
+					.calc-content__item
+						.calc-content__row.calc-content__row
+							span.calc--num 05
+							.calc-result
+								.calc-result__row
+									span.calc-result--title Спасибо за заказ!
+									p Наш менеджер перезвонит #[br] Вам через 10 минут.
+									button.btn Понятно
+			.benefits(data-anchor-to='2')
+				.benefits__row
+					span.title-h2 Преимущества покупки
+					.benefits__grid
+						.benefits-item
+							.benefits-item__content
+								.benefits-item--icon
+									img(src='./img/benefits-icon-1.png', width='63', height='58', alt='')
+								span.benefits-item--title Online - это выгодно и удобно
+								p Новые автомобили по самым выгодным ценам в удобном формате online
+						.benefits-item
+							.benefits-item__content
+								.benefits-item--icon
+									img(src='./img/benefits-icon-2.png', width='85', height='59', alt='')
+								span.benefits-item--title Прозрачность сделки
+								p Вы видите конечную стоимость автомобиля на сайте. Отсутствие #[br] скрытых платежей
+						.benefits-item
+							.benefits-item__content
+								.benefits-item--icon
+									img(src='./img/benefits-icon-3.png', width='60', height='63', alt='')
+								span.benefits-item--title Экономия времени
+								p Доставим автомобиль в #[br] короткие сроки в Ваш город #[br] проживания
+						.benefits-item
+							.benefits-item__content
+								.benefits-item--icon
+									include ./img/benefits-icon-4.svg
+								span.benefits-item--title Безопасность сделки
+								p Гарантия юридической чистоты
+				img.img-cover(src='./pic/benefits-bg.jpg', width='1920', height='492', alt='')
+			.reviews(data-anchor-to='3')
+				.reviews__row
+					span.title-h2 Отзывы наших покупателей
+					.reviews-slider.slick-rounded(data-ratio='0.59375')
+						.reviews-slider__item
+							.reviews-slider-content.scale
+								i.play-icon
+								.reviews-slider-quote
+									p Получил автомобиль точно в указанный срок. Полностью в той комплектации, на которую договаривались. Спасибо сотрудникам автосалона AVIRRA, в частности Александру Дорофееву за профессионализм.
+									p Петр, г. Якутск
+								img.img-cover(src='./pic/reviews-1.jpg', width='624', height='364', alt='')
+						.reviews-slider__item
+							.reviews-slider-content.scale
+								i.play-icon
+								.reviews-slider-quote
+									p Получил автомобиль точно в указанный срок. Полностью в той комплектации, на которую договаривались. Спасибо сотрудникам автосалона AVIRRA, в частности Александру Дорофееву за профессионализм.
+									p Петр, г. Якутск
+								img.img-cover(src='./pic/reviews-1.jpg', width='624', height='364', alt='')
+						.reviews-slider__item
+							.reviews-slider-content.scale
+								i.play-icon
+								.reviews-slider-quote
+									p Получил автомобиль точно в указанный срок. Полностью в той комплектации, на которую договаривались. Спасибо сотрудникам автосалона AVIRRA, в частности Александру Дорофееву за профессионализм.
+									p Петр, г. Якутск
+								img.img-cover(src='./pic/reviews-1.jpg', width='624', height='364', alt='')
+						.reviews-slider__item
+							.reviews-slider-content.scale
+								i.play-icon
+								.reviews-slider-quote
+									p Получил автомобиль точно в указанный срок. Полностью в той комплектации, на которую договаривались. Спасибо сотрудникам автосалона AVIRRA, в частности Александру Дорофееву за профессионализм.
+									p Петр, г. Якутск
+								img.img-cover(src='./pic/reviews-1.jpg', width='624', height='364', alt='')
+						.reviews-slider__item
+							.reviews-slider-content.scale
+								i.play-icon
+								.reviews-slider-quote
+									p Получил автомобиль точно в указанный срок. Полностью в той комплектации, на которую договаривались. Спасибо сотрудникам автосалона AVIRRA, в частности Александру Дорофееву за профессионализм.
+									p Петр, г. Якутск
+								img.img-cover(src='./pic/reviews-1.jpg', width='624', height='364', alt='')
+						.reviews-slider__item
+							.reviews-slider-content.scale
+								i.play-icon
+								.reviews-slider-quote
+									p Получил автомобиль точно в указанный срок. Полностью в той комплектации, на которую договаривались. Спасибо сотрудникам автосалона AVIRRA, в частности Александру Дорофееву за профессионализм.
+									p Петр, г. Якутск
+								img.img-cover(src='./pic/reviews-1.jpg', width='624', height='364', alt='')
+			.news(data-anchor-to='4')
+				i.news--car
+				.news__row
+					span.title-h2 Новости
+					.news__grid.slick-circled(data-ratio='0.6666')
+						.news__col
+							a.item-news.scale(href='javascript:void(0);')
+								span.item-news--title Автомобили по ценам прошлого года в автосалоне Avirra
+								.item-news--bg
+									img.img-cover(src='./pic/news-1.jpg', width='450', height='300', alt='')
+							a.item-news.scale(href='javascript:void(0);')
+								span.item-news--title Лучший в мире сертифицированный диагност Toyota Land Cruiser работает в Avirra
+								.item-news--bg
+									img.img-cover(src='./pic/news-2.jpg', width='450', height='300', alt='')
+						.news__col
+							a.item-news.scale(href='javascript:void(0);')
+								span.item-news--title Новый Peugeot 5008 появится в России в начале следующего года
+								.item-news--bg
+									img.img-cover(src='./pic/news-3.jpg', width='450', height='300', alt='')
+							a.item-news.scale(href='javascript:void(0);')
+								span.item-news--title Renault представил новый Koleos!
+								.item-news--bg
+									img.img-cover(src='./pic/news-4.jpg', width='450', height='300', alt='')
+						.news__col
+							a.item-news.scale(href='javascript:void(0);')
+								span.item-news--title Volvo Car презентовало седаны S90 на выставке Discover Russia
+								.item-news--bg
+									img.img-cover(src='./pic/news-5.jpg', width='450', height='300', alt='')
+							a.item-news.scale(href='javascript:void(0);')
+								span.item-news--title Автомобили по ценам прошлого года в автосалоне Avirra
+								.item-news--bg
+									img.img-cover(src='./pic/news-1.jpg', width='450', height='300', alt='')
+						.news__col
+							a.item-news.scale(href='javascript:void(0);')
+								span.item-news--title Автомобили по ценам прошлого года в автосалоне Avirra
+								.item-news--bg
+									img.img-cover(src='./pic/news-1.jpg', width='450', height='300', alt='')
+							a.item-news.scale(href='javascript:void(0);')
+								span.item-news--title Лучший в мире сертифицированный диагност Toyota Land Cruiser работает в Avirra
+								.item-news--bg
+									img.img-cover(src='./pic/news-2.jpg', width='450', height='300', alt='')
+						.news__col
+							a.item-news.scale(href='javascript:void(0);')
+								span.item-news--title Новый Peugeot 5008 появится в России в начале следующего года
+								.item-news--bg
+									img.img-cover(src='./pic/news-3.jpg', width='450', height='300', alt='')
+							a.item-news.scale(href='javascript:void(0);')
+								span.item-news--title Renault представил новый Koleos!
+								.item-news--bg
+									img.img-cover(src='./pic/news-4.jpg', width='450', height='300', alt='')
+						.news__col
+							a.item-news.scale(href='javascript:void(0);')
+								span.item-news--title Volvo Car презентовало седаны S90 на выставке Discover Russia
+								.item-news--bg
+									img.img-cover(src='./pic/news-5.jpg', width='450', height='300', alt='')
+							a.item-news.scale(href='javascript:void(0);')
+								span.item-news--title Автомобили по ценам прошлого года в автосалоне Avirra
+								.item-news--bg
+									img.img-cover(src='./pic/news-1.jpg', width='450', height='300', alt='')
+			.about
+				.about__row
+					.about-content
+						i.about-content--car
+						span.about-content--title AVIRRA. ONLINE  - Сервис #[br] заказа автомобиля с доставкой
+						p Уважаемые клиенты и будущие покупатели! Мы запустили новый проект совместно с автосалоном AVIRRA, получившим заслуженное доверие покупателей с разных городов России, Казахстана и Белоруссии.
+						p На нашем сайте Вы можете выбрать и заказать автомобиль премиальных брендов Toyota и Lexus с доставкой в Ваш город проживания. 
+						p Миссия нашей компании –  предоставить лучший сервис при покупке премиальных автомобилей с доставкой в короткие сроки, сформировав уникальное предложение и заслуженно получив благодарность и доверие наших Покупателей.
+			.gallery.slick-circled(data-ratio='0.6666', data-anchor-to='5')
+				.gallery--item.scale
+					img.img-cover(src='./pic/gallery-1.jpg', width='480', height='320', alt='')
+				.gallery--item.scale
+					img.img-cover(src='./pic/gallery-2.jpg', width='480', height='320', alt='')
+				.gallery--item.scale
+					img.img-cover(src='./pic/gallery-3.jpg', width='480', height='320', alt='')
+				.gallery--item.scale
+					img.img-cover(src='./pic/gallery-4.jpg', width='480', height='320', alt='')
+				.gallery--item.scale
+					img.img-cover(src='./pic/gallery-1.jpg', width='480', height='320', alt='')
+				.gallery--item.scale
+					img.img-cover(src='./pic/gallery-2.jpg', width='480', height='320', alt='')
+				.gallery--item.scale
+					img.img-cover(src='./pic/gallery-3.jpg', width='480', height='320', alt='')
+				.gallery--item.scale
+					img.img-cover(src='./pic/gallery-4.jpg', width='480', height='320', alt='')
+		include modules/footer.pug
+		include modules/modals.pug
+		script(src='./js/libs.js')
+		script(src='./js/scripts.js')

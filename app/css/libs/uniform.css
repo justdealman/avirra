@@ -1,0 +1,108 @@
+div.checker,
+div.radio {
+	position: relative
+}
+
+div.checker,
+div.checker input,
+div.checker span {
+	width: 18px;
+	height: 18px;
+	cursor: pointer
+}
+
+div.radio,
+div.radio input,
+div.radio span {
+	width: 18px;
+	height: 18px;
+	cursor: pointer	
+}
+
+div.checker input,
+div.radio input {
+	filter: alpha(opacity=0);
+	border: none
+}
+
+div.checker span,
+div.radio input,
+div.radio span {
+	zoom: 1;
+	text-align: center
+}
+
+div.checker span {
+	position: relative;
+	display: -moz-inline-box;
+	display: inline-block;
+	border: 1px solid #55afed;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+
+div.checker span:before {
+	content: '';
+	position: absolute;
+	left: 1px;
+	top: 2px;
+	width: 15px;
+	height: 12px;
+	background: url('../img/check-icon.svg') no-repeat 0 0;
+	background-size: 100% 100%;
+	opacity: 0;
+}
+
+div.checker span.checked:before {
+	opacity: 1;
+}
+
+div.checker input {
+	opacity: 0;
+	-moz-opacity: 0;
+	background: 0 0;
+	display: -moz-inline-box;
+	display: inline-block;
+	zoom: 1
+}
+
+div.radio span {
+	position: relative;
+	display: -moz-inline-box;
+	display: inline-block;
+	border: 1px solid #3c4d9a;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	-webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.55);
+	box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.55);
+}
+
+div.radio span.checked {
+	border-color: #55afed;
+}
+
+div.radio span:before {
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 8px;
+	height: 8px;
+	margin: -4px 0 0 -4px;
+	background: #55afed;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	opacity: 0;
+}
+
+div.radio span.checked:before {
+	opacity: 1;
+}
+
+div.radio input {
+	opacity: 0;
+	-moz-opacity: 0;
+	background: 0 0;
+	display: -moz-inline-box;
+	display: inline-block
+}
