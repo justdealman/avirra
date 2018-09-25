@@ -2026,41 +2026,54 @@ body.compensate-for-scrollbar{overflow:hidden;-ms-overflow-style:none}.fancybox-
 	opacity: 1;
 	visibility: visible;
 }
+body.is-locked {
+	overflow: hidden;
+}
 .modal {
-	position: absolute;
-	left: 50%;
+	overflow-y: auto;
+	position: fixed;
+	left: 0;
 	top: 0;
 	z-index: 1010;
-	width: 1230px;
-	padding: 89px 50px 40px;
-	margin-left: -615px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	text-align: center;
 	background: #fff;
 	opacity: 0;
 	visibility: hidden;
-	-webkit-transform: translateY(20px);
-	-ms-transform: translateY(20px);
-	transform: translateY(20px);
 	-webkit-transition: opacity 0.4s ease, visibility 0.4s ease, -webkit-transform 0.4s ease;
 	transition: opacity 0.4s ease, visibility 0.4s ease, -webkit-transform 0.4s ease;
 	-o-transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
 	transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
 	transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease, -webkit-transform 0.4s ease;
 }
+.modal__content {
+	display: inline-block;
+	width: 100%;
+	max-width: 1500px;
+	text-align: left;
+	padding: 89px 30px 40px;
+	margin: 0 auto;
+}
 .modal.is-opened {
 	opacity: 1;
 	visibility: visible;
-	-webkit-transform: translateY(0);
-	-ms-transform: translateY(0);
-	transform: translateY(0);
 }
 .modal--close {
 	position: absolute;
-	right: 30px;
+	right: 50%;
 	top: 30px;
 	display: block;
 	width: 60px;
 	height: 60px;
 	cursor: pointer;
+	margin-right: -720px;
 	background-color: #e7e7e7;
 	border-radius: 50%;
 }
@@ -2223,6 +2236,7 @@ body.compensate-for-scrollbar{overflow:hidden;-ms-overflow-style:none}.fancybox-
 	display: none;
 }
 .ui-datepicker {
+	display: none;
 	position: relative;
 	width: 360px;
 	padding: 6px 3px 4px;
@@ -2485,11 +2499,9 @@ body.compensate-for-scrollbar{overflow:hidden;-ms-overflow-style:none}.fancybox-
 	.about-content--car {
 		right: 22px;
 	}
-	.modal {
-		width: 1000px;
-		padding-left: 30px;
-		padding-right: 30px;
-		margin-left: -500px;
+	.modal--close {
+		right: 30px;
+		margin-right: 0;
 	}
 	.ui-datepicker {
 		width: 290px;
@@ -3117,13 +3129,8 @@ body.compensate-for-scrollbar{overflow:hidden;-ms-overflow-style:none}.fancybox-
 	.footer__text--agreement a:after {
 		display: none;
 	}
-	.modal {
-		position: absolute;
-		left: 15px;
-		top: 0;
-		width: calc(100% - 30px);
-		padding: 16px 15px 10px;
-		margin-left: 0;
+	.modal__content {
+		padding: 50px 15px 10px;
 	}
 	.modal--close {
 		right: 15px;
@@ -3150,6 +3157,9 @@ body.compensate-for-scrollbar{overflow:hidden;-ms-overflow-style:none}.fancybox-
 	}
 	.form--agreement {
 		margin: 0 0 20px;
+	}
+	.form--message {
+		margin-bottom: 0;
 	}
 	.faq {
 		margin: 0 0 20px;
